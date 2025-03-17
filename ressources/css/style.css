@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&family=Poiret+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "Poiret One", sans-serif;
+    font-weight: 800;
+}
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 8px;
+}
+header{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background: rgba(0, 0, 0, 0.63);
+    color: aliceblue;
+}
+header h1{
+    font-family: "Henny Penny", system-ui;
+    color: aliceblue;
+    margin: 5px;
+} 
+body{  
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    content: '';
+    display: block;  
+    background-image: linear-gradient(to bottom rgb(97, 91, 91) white ), url(../../public/img/arrangement-abstract-festive-balloons.jpg);
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    opacity: 0.9;
+}
+
+
+/* .formulario{
+    display: flex;  
+    align-items: center;  
+    justify-content: center; 
+    margin: 15px;
+    padding: 15px;
+    border-radius: 20px;
+}
+.formulario label{
+    background-color: beige;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px; 
+    color: black;
+}
+.formulario input{
+    
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}   */
+#evento{
+    width: 800px;
+}  
+#descricao{
+    width: 800px;
+    height: 200px;
+}
+#nome {
+    width: 800px;
+}
+#email{
+    width: 800px;
+} 
