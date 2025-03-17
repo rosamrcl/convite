@@ -29,8 +29,13 @@ body{
     width: 100%;
     height: 100vh;
     background: rgba(105, 102, 102, 0.199);
-}
+}    
 
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .formula{
     display: flex;  
@@ -39,21 +44,20 @@ body{
     margin: 15px;
     padding: 15px;
     border-radius: 20px;
-    background: rgb(175, 74, 74);
+    background: rgb(105, 100, 100);
+    color: aliceblue;
 }
-.formula label{
-    background-color: beige;
-    margin: 5px;
-    padding: 5px;
-    border-radius: 10px; 
-    color: black;
+.formula h1, h2{
+    text-align: center;
 }
+
 .formula input{
     
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
-}   
+}
+
 #evento{
     width: 800px;
 }  
@@ -67,6 +71,18 @@ body{
 #email{
     width: 800px;
 } 
+.login-festa{ 
+    margin: 15px;
+    padding: 15px;
+    border-radius: 20px;
+    background: rgb(105, 100, 100);
+    color: aliceblue;
+}
+.login-festa input{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
 footer{
     display: flex;
     align-items: center;
