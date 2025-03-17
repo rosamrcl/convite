@@ -28,41 +28,32 @@ header h1{
 body{  
     width: 100%;
     height: 100vh;
-    position: relative;
-    content: '';
-    display: block;  
-    background-image: linear-gradient(to bottom rgb(97, 91, 91) white ), url(../../public/img/arrangement-abstract-festive-balloons.jpg);
-    left: 0;
-    top: 0;
-    z-index: -1;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    opacity: 0.9;
+    background: rgba(105, 102, 102, 0.199);
 }
 
 
-/* .formulario{
+.formula{
     display: flex;  
     align-items: center;  
     justify-content: center; 
     margin: 15px;
     padding: 15px;
     border-radius: 20px;
+    background: rgb(175, 74, 74);
 }
-.formulario label{
+.formula label{
     background-color: beige;
     margin: 5px;
     padding: 5px;
     border-radius: 10px; 
     color: black;
 }
-.formulario input{
+.formula input{
     
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
-}   */
+}   
 #evento{
     width: 800px;
 }  
@@ -76,3 +67,9 @@ body{
 #email{
     width: 800px;
 } 
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.63);
+}
