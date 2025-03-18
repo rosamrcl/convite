@@ -15,21 +15,28 @@
     </header> 
     <main>
         
-     
+
             <div class="login-festa">
-                <form action="login.php" method="post">
+                
                     <fieldset> <legend>Festive</legend>
-                    <label for="login">Login</label><br>
-                    <input type="text" name="login" id="login" required><br>
-                    <label for="senha">Senha</label><br>
-                    <input type="password" name="senha" id="senha" required min="6"><br>
-                    <p>Não esquecer senha</p>
-                    <input class="enviar" type="submit" value="Enviar">
+                    <?php 
+                    if (isset($_POST['submit'])EE !empty($_POST['email'])){
+                        include_once('config.php');
+                        $email=$_POST['email'];
+                        $senha-$_POST['senha'];
+                        $sql="SELECT *FROm usuarios WHERE email =$email and senha= $senha";
+                        $result=$conexao->query($sql);
+
+                    }else{
+                        header('Location: login.php')
+                    }
+                    ?>
+                    
                     </fieldset>
-                   
-                </form>
+            
+            
             </div>
-       
+
     </main>
     <footer>
         <a href="https://github.com/RosaCL"><img src="../../public/img/costureza.png" alt=""></a>

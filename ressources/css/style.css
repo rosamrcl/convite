@@ -43,6 +43,59 @@ main{
     align-items: center;
     justify-content: center;
 }
+.home{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background: rgba(0, 0, 0, 0.6);
+text-align: center;
+padding: 30px;
+border-radius: 20px;
+font-size: 3rem;
+}
+.home h1{
+    font-family: "Henny Penny", system-ui;
+    color:aliceblue;   
+    margin: 5px;
+}
+.home button{
+    border: 3px solid purple;
+    background: rgb(0,0,0,0.6);
+    color: aliceblue;
+    border-radius: 10px;
+    width: 200px;
+    height: 100px;
+    margin: 5px;
+    padding: 10px;
+    font-size: 2rem;
+
+}
+.home button:hover{
+    background-color: blueviolet;
+    cursor: pointer;
+}
+.cadastro{
+    display: flex;  
+    align-items: center;  
+    justify-content: center; 
+    margin: 15px;
+    padding: 15px;
+    border-radius: 20px;
+    background: rgb(0,0,0,0.6);
+    color: aliceblue;
+    }
+.cadastro input{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    }
+#name{
+    width: 800px;
+}
+#senha{
+    width: 800px;
+}
 
 .formula{
     display: flex;  
@@ -51,7 +104,7 @@ main{
     margin: 15px;
     padding: 15px;
     border-radius: 20px;
-    background: rgb(105, 100, 100);
+    background: rgb(0,0,0,0.6);
     color: aliceblue;
     
 }
@@ -97,6 +150,12 @@ main{
 margin: 10px;
 padding: 10px;
 font-size: 2rem;
+background: rgb(105, 100, 100);
+color: aliceblue;
+}
+.enviar:hover{
+    background: blueviolet;
+    cursor: pointer;
 }
 legend{
     font-family: "Henny Penny", system-ui;
