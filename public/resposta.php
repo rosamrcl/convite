@@ -13,6 +13,7 @@
         <p>Crie um convite digital para seu evento</p>
     </header>
         <main>
+            
             <div class="formula">
                 <fieldset><legend>Dados do convite</legend>
 
@@ -29,17 +30,67 @@
                     $email=($_POST['email']);
                     $telefone=($_POST['telefone']);
                     $termos=($_POST['termos']);
+                    $aceitoemail=($_POST['aceitoemail']);
                     $aceitosms=($_POST['aceitosms']);
+                    $uploadDir="uploads/";
+                    if (!file_exists($uploadDir)){
+                        mkdir($uploadDir,0777,true);
+                    }
+                    $arquivoNome=$_FILES["arquivo"]["name"];
+                    $arquivoTemp=$_FILES["arquivo"]["tmp_name"];
+                    $arquivoDestino=$uploadDir.basename($arquivoNome);
+                    $uploadOk=1;
 
-
-                }
-                
-                
+                    if(!empty($arquivoNome)){
+                        $fileType=strlower(pathinfo($arquivoDestino,PATHINFO_EXTENSION));
+                        $allowedTypes=["jpg", "jpeg", "png"];
+                        if(!in_array($fileType, $allowedTypes)){
+                            echo "Apenas arquivos JPG, JPEG e PNG são permitidos";
+                            $uploadOk=0;
+                        }
+                    }
+                    if($_FILES["arquivo"]["sixe"]>5*1024*1024){
+                        echo "O arquivo é muito grande (máximo 5MB).";
+                        $uploadOk=0;
+                    }
+                    if($uploadOk==1){
+                        if(move_uploaded_file($arquivoTemp, $arquivoTemp)){
+                            $imagemURL=$arquivoDestino;
+                        }else{
+                            echo"Erro ao enviar a imagem.";
+                            $imagemURL="";
+                        }else{
+                            $imagemURL="";
+                        }else{
+                            $imagemURL="";
+                        }
+                    }if(!empty($imagemURL)){
+                        
+                    }
+                            }else{
+                    header("Location:../ressources/views/convite.html");
+                }              
+                echo "<p>
+                <strong>Evento:</strong> $evento
+                <strong>Inicio:</strong> $inicio
+                <strong>fim:</strong> $fim
+                <strong>Tipo Evento:</strong> $tipoevento
+                <strong>Descrição:</strong> $descricao
+                <strong>Tema Evento:</strong> $temaevento
+                <strong>Nome:</strong> $nome
+                <strong>E-mail:</strong> $email
+                <strong>Telefone:</strong> $telefone
+                <strong>Termos:</strong> $termos
+                <strong>Aceito receber e-mail:</strong> $aceitoemail
+                <strong>Aceito receber SMS:</strong> $aceitosms
+                </p>";
                 
                 ?>
+               
                 </fieldset>
 
             </div>
+            
         </main>
     <footer>
       <a href="https://github.com/RosaCL"
