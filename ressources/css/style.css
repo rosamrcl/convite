@@ -5,6 +5,7 @@
     text-decoration: none;
     font-family: "Poiret One", sans-serif;
     font-weight: 800;
+    box-sizing: border-box;
 }
 .container{
     max-width: 1440px;
@@ -22,13 +23,19 @@ header{
 }
 header h1{
     font-family: "Henny Penny", system-ui;
-    color: aliceblue;
+    color:aliceblue;   
     margin: 5px;
+}
+header p{
+    margin: 10px;
 } 
 body{  
     width: 100%;
     height: 100vh;
-    background: rgba(105, 102, 102, 0.199);
+    background-image: url(../../public/img/cake-colorful-balloons.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.9;
 }    
 
 main{
@@ -46,6 +53,7 @@ main{
     border-radius: 20px;
     background: rgb(105, 100, 100);
     color: aliceblue;
+    
 }
 .formula h1, h2{
     text-align: center;
@@ -72,20 +80,35 @@ main{
     width: 800px;
 } 
 .login-festa{ 
-    margin: 15px;
-    padding: 15px;
+    margin: 200px 200px 200px;
+    padding: 20px;
     border-radius: 20px;
     background: rgb(105, 100, 100);
-    color: aliceblue;
+    color: aliceblue; 
+    font-size: 2rem;
 }
 .login-festa input{
-    margin: 10px;
-    padding: 10px;
+    margin: 20px;
+    padding: 20px;
     border-radius: 10px;
+    width: 800px;
+}
+.enviar{
+margin: 10px;
+padding: 10px;
+font-size: 2rem;
+}
+legend{
+    font-family: "Henny Penny", system-ui;
+    font-size: 4em;
+    color: aliceblue;
 }
 footer{
     display: flex;
     align-items: center;
     justify-content: center;
     background: rgba(0, 0, 0, 0.63);
+    bottom: 0;
+    position: fixed;
+    width: 100%;   
 }

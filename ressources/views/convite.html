@@ -13,23 +13,25 @@
         <p>Crie um convite digital para seu evento</p>
     </header>  
     <main>
+        <fieldset><legend><h1>Crie seu convite</h1></legend>
+        
         <div class="formula container">
             <form action="../../public/resposta.php" method="post">
-                <h1>Crie seu convite</h1>
+                
                 <h2><i class="fa-solid fa-calendar-days"></i> Sobre o evento</h2><br>         
                     <label for="evento">Título</label><br>
-                    <input type="text" name="evento" id="evento" placeholder="Nome do Evento"><br>
+                    <input type="text" name="evento" id="evento" placeholder="Nome do Evento" required><br>
                     <label for="inicio">Início</label>
                     <input type="date" name="inicio" id="inicio">
                     <label for="fim">Fim</label>
                     <input type="date" name="fim" id="fim"><br>
                     <input type="checkbox" name="tipoevento" id="tipoevento">
-                    <label for="tipoevento">Presencial</label>
+                    <label for="tipoevento"><i class="fa-solid fa-champagne-glasses"></i> Presencial</label>
                     <input type="checkbox" name="tipoevento" id="tipoevento">
-                    <label for="tipoevento">Online</label><br><br>
+                    <label for="tipoevento"><i class="fa-solid fa-video"></i> Online</label><br><br>
                     <label for="descricao">Descrição</label><br>
                     <input type="text" name="descricao"  id="descricao">
-               
+        
                 
     
                     <h3>Personalização <i class="fa-solid fa-wand-magic-sparkles" style="color: white;"></i></h3>
@@ -69,21 +71,23 @@
     
                     <h3>Dados para contato</h3><br>
                     <label for="nome">Nome</label><br>
-                    <input type="text" id="nome" name="nome" placeholder="Nome Completo"><br>
+                    <input type="text" id="nome" name="nome" placeholder="Nome Completo" required><br>
                     <label for="email">E-mail</label><br>
-                    <input type="email" name="email" id="email" placeholder="exemplo@email.com"><br>
+                    <input type="email" name="email" id="email" placeholder="exemplo@email.com" required><br>
                     <label for="telefone">Telefone</label><br>
-                    <input type="tel" name="telefone" id="telefone" placeholder="(99)99999-9999"><br>
+                    <input type="tel" name="telefone" id="telefone" placeholder="(99)99999-9999" min="12" required><br>
                
         
                 <input type="checkbox" name="termos" id="termos"> <label for="termos"> Li e concordo com os <strong>Termos e Condições</strong> e com a <strong>Política de Privacidade</strong> </label>
                 <br>
-                <input type="checkbox" name="aceitoemail" id="aceitoemail"> <label for="aceitoemail">Aceito receber atualizações e promoções por e-mail </label><br>
+                <input type="checkbox" name="aceitoemail" id="aceitoemail" required> <label for="aceitoemail">Aceito receber atualizações e promoções por e-mail </label><br>
                 <input type="checkbox" name="aceitosms" id="aceitosms"> <label for="aceitosms"> Aceito receber atualizações e promoções por SMS </label><br>
-                <input type="submit" value="Gerar convite">       
+                <input class="enviar" type="submit" value="Gerar convite">       
            
             </form>
         </div>
+        </fieldset>
+        
 
     </main>
     <footer>
