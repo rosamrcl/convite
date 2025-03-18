@@ -57,8 +57,8 @@
                 if(!file_exists($uploadDir)){
                     mkdir($uploadDir,0777,true);
                 }
-                $arquivoNome = $_FILES["arquivo"]["name"];
-                $arquivoTemp = $_FILES["arquivo"]["tmp_name"];
+                $arquivoNome = $_FILES['imagem']['name'];
+                $arquivoTemp = $_FILES['imagem']['tmp_name'];
                 $arquivoDestino = $uploadDir . basename($arquivoNome);
                 $uploadOk = 1;
                 if(!empty($arquivoNome)){
@@ -68,7 +68,7 @@
                         echo "Apenas arquivos JPG, JPEG e PNG são permitidos.<br>";
                             $uploadOk = 0;
                     }
-                    if($_FILES["arquivo"]["size"] > 5 * 1024 * 1024){
+                    if($_FILES['imagem']['size'] > 5 * 1024 * 1024){
                         echo "O arquivo é muito grande (máximo 5MB).<br>";
                         $uploadOk = 0;
                     }
