@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="../ressources/css/style.css">
 </head>
 <body>
-    <header>
-        <a href="./index.php"><i class="fa-solid fa-house" style="color: #e6ebf4;"></i></a>
+    <header>        
         <h1>Festive</h1>
         <p>Crie um convite digital para seu evento</p>
     </header>
@@ -87,15 +86,14 @@
                 }
             }
             ?>
-           
+
 
             </fieldset>
         </div>
     </main>
     <footer>
         <a href="https://github.com/RosaCL"
-            ><img src="../../public/img/costureza.png" alt=""
-        /></a>
+            ><img src="../../public/img/costureza.png" alt=""/></a>
     </footer>
 </body>
 </html>
